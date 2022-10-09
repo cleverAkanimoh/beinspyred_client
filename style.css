@@ -43,7 +43,7 @@ Variables
 	--clr-green-light: hsl(125, 71%, 66%);
 	--clr-black: #222;
 
-	--transition: all 0.5s linear;
+	--transition: all 0.25s linear;
 	--spacing: 0.1rem;
 	--radius: 0.75rem;
 	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -65,10 +65,10 @@ Variables
 		scale: 1.1;
 		transform: translateY(-20px);
 	}
-    100% {
-       transform: translateZ(20px);
-       color: red; 
-    }
+	100% {
+		transform: translateZ(20px);
+		color: red;
+	}
 }
 @keyframes clrChange {
 	50% {
@@ -80,9 +80,9 @@ Variables
 }
 
 @keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 /*
@@ -99,6 +99,11 @@ Global Styles
 	box-sizing: border-box;
 	-webkit-tap-highlight-background-color: rgba(255, 255, 255, 0);
 }
+
+-webkit-scrollbar {
+	display: none;
+}
+
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -107,7 +112,7 @@ body {
 	line-height: 1.5;
 	font-size: 0.875rem;
 	overflow-x: hidden;
-    scroll-behavior: smooth
+	scroll-behavior: smooth;
 }
 ul {
 	list-style-type: none;
@@ -149,7 +154,7 @@ welcome page
 
 #welcome {
 	min-height: 100vh;
-    padding: 0 1rem;
+	padding: 0 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -159,17 +164,17 @@ welcome page
 }
 
 #welcome img {
-    width: 310px;
-    height: 255px;
+	width: 310px;
+	height: 255px;
 }
 
 .loading {
-    width: 5rem;
-    height: 5rem;
-    border: 5px solid var(--clr-grey-4);
-    border-radius: 50%;
-    border-top-color: var(--clr-primary-5);
-    animation: spinner 0.6s linear infinite;
+	width: 5rem;
+	height: 5rem;
+	border: 5px solid var(--clr-grey-4);
+	border-radius: 50%;
+	border-top-color: var(--clr-primary-5);
+	animation: spinner 0.6s linear infinite;
 }
 
 /*
@@ -183,9 +188,9 @@ main {
 }
 
 header {
-	background: url(images/hero_bcg.jpg) center/cover no-repeat;
-    position: relative;
-    height: 100vh;
+	background: linear-gradient(rgba(63, 208, 212, 0.3), rgba(0, 0, 0, 0.8)), url(images/hero_bcg.jpg) center/cover no-repeat;
+	position: relative;
+	height: 100vh;
 }
 
 header nav img {
@@ -201,8 +206,20 @@ header nav img {
 	justify-content: center;
 	background: transparent;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
+
+/* fixed nav */
+.fixed-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: inherit;
+	box-shadow: var(--light-shadow);
+    z-index: 4;
+}
+
 .nav-center {
 	width: 90vw;
 	max-width: var(--max-width);
@@ -228,11 +245,11 @@ button.link-btn {
 	transition: var(--transition);
 }
 .btn:nth-child(2) {
-    border-radius: 0.5rem;
+	border-radius: 0.5rem;
 }
 .btn:nth-child(2) i {
-    font-size: 1.35rem;
-    font-weight: bold;
+	font-size: 1.35rem;
+	font-weight: bold;
 }
 .btn:hover {
 	background: var(--clr-white) !important;
@@ -322,11 +339,10 @@ button.link-btn {
 }
 .sidebar-wrapper.show {
 	visibility: visible;
-	z-index: 2;
+	z-index: 5;
 }
 .sidebar-wrapper.show .sidebar {
 	transform: scale(1);
-    
 }
 .sidebar {
 	width: 90vw;
@@ -359,25 +375,20 @@ button.link-btn {
 	margin-right: 1rem;
 }
 
-@media screen and (min-width: 800px) {
-	.sidebar-wrapper {
-		display: none;
-	}
-}
-
 /* links */
 .submenu {
 	background: var(--clr-white);
 	box-shadow: var(--dark-shadow);
-	position: absolute;
-	top: 4rem;
+	position: fixed;
+	top: 5.5rem;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: 3;
+	z-index: 5;
 	display: none;
 	padding: 2rem;
 	border-radius: var(--radius);
 }
+
 .submenu::before {
 	content: "";
 	display: block;
@@ -413,52 +424,52 @@ button.link-btn {
 	margin-bottom: 1.5rem;
 }
 .submenu-center a {
-	width: 10rem;
+	width: 6.5rem;
 	display: block;
 	color: var(--clr-grey-1);
 	text-transform: capitalize;
 }
 .submenu-center i {
 	color: var(--clr-grey-5);
-	margin-right: 1rem;
+	margin-right: 0.5rem;
 }
 
 /* contact modal */
 
 .contactWrapper {
-    position: absolute;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    height: 100vh;
-    width: 100vw;
-    z-index: -3;
-    display: grid;
-    place-items: center;
-    visibility: hidden;
-    transition: var(--transition);
+	position: fixed;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+	height: 100vh;
+	width: 100vw;
+	z-index: -3;
+	display: grid;
+	place-items: center;
+	visibility: hidden;
+	transition: var(--transition);
 }
 
 .contactWrapper.show {
-    visibility: visible;
-    z-index: 2;
+	visibility: visible;
+	z-index: 5;
 }
 
 .contactWrapper.show .contactMenu {
-    scale: 1;
+	scale: 1;
 }
 
 .contactWrapper .contactMenu {
-    position: relative;
-    background: white;
-    height: 80vh;
-    width: 80vw;
-    border-radius: var(--radius);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    place-items: center;
-    scale: 0;
-    transition: var(--transition);
+	position: relative;
+	background: white;
+	height: 80vh;
+	width: 80vw;
+	border-radius: var(--radius);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	place-items: center;
+	scale: 0;
+	transition: var(--transition);
 }
 
 /* footer design */
@@ -487,6 +498,9 @@ button.link-btn {
 	h3,
 	h4 {
 		line-height: 1;
+	}
+    .sidebar-wrapper {
+		display: none;
 	}
 	.nav-center {
 		display: grid;
@@ -539,12 +553,12 @@ button.link-btn {
 	.contact-sm {
 		display: block;
 	}
-    #welcome h2 {
-        font-size: 2.4rem ;
-        line-height: 1.1;
-        width: 500px;
-        /* border:1px solid red; */
-    }
+	#welcome h2 {
+		font-size: 2.4rem;
+		line-height: 1.1;
+		width: 500px;
+		/* border:1px solid red; */
+	}
 }
 @media screen and (min-width: 800px) {
 	.hero {
@@ -575,18 +589,18 @@ button.link-btn {
 	.contact-sm {
 		display: none;
 	}
-    #welcome {
-        padding: 2rem;
-    }
-    #welcome h2 {
-        font-size: 3.2rem;
-        line-height: 1.1;
-        width: 750px;
-    }
-    #welcome img {
-        width: 400px ;
-        height: 300px;
-    }
+	#welcome {
+		padding: 2rem;
+	}
+	#welcome h2 {
+		font-size: 3.2rem;
+		line-height: 1.1;
+		width: 750px;
+	}
+	#welcome img {
+		width: 400px;
+		height: 300px;
+	}
 }
 
 @media screen and (min-width: 1200px) {

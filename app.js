@@ -1,23 +1,16 @@
-import sublinks from './data.js';
+import sublinks from './js/data.js';
 
-const toggleBtn = document.querySelector('.toggle-btn');
-const sidebarWrapper = document.querySelector('.sidebar-wrapper');
-const sidebar = document.querySelector('.sidebar-links');
-const linkBtns = [...document.querySelectorAll('.link-btn')];
-const submenu = document.querySelector('.submenu');
-const hero = document.querySelector('.hero');
-const nav = document.querySelector('.nav');
-const beinspyredText = document.querySelector('.hero-info em');
-const welcome = document.querySelector('#welcome');
-const main = document.querySelector('main');
-const logo = document.querySelector('.nav-logo');
-const contactBtn = document.querySelectorAll('.contact-btn');
-const contactWrapper = document.querySelector('.contactWrapper');
+import { welcome, main, navbar, toggleBtn, sidebarWrapper, sidebar, linkBtns, submenu, hero, beinspyredText, logo, contactBtn, contactWrapper, date } from './js/declarations.js';
+
+// setting year
+date.innerText = new Date().getFullYear();
 
 // load page
 logo.onclick = () => {
   window.location.reload();
 }
+
+// reload page
 
 window.onload = () => {
   welcome.style.display = 'none';
@@ -35,6 +28,19 @@ contactBtn.forEach(btn => {
 contactWrapper.onclick = () => {
   contactWrapper.classList.remove('show');
 }
+
+// fixed nav
+
+window.onscroll = () => {
+    const scrollHeight = window.pageYOffset;
+    const navHeight = navbar.getBoundingClientRect().height;
+    if (scrollHeight > navHeight) {
+        navbar.classList.add('fixed-nav');
+    } else {
+        navbar.classList.remove('fixed-nav');
+    }
+    console.log(navbar)
+};
 
 // text effect
 
@@ -63,7 +69,7 @@ const complete = () => {
 
 let timer = setInterval(ontick, 200)
 
-// hide/show sideabar
+// hide/show sidebar
 
 toggleBtn.addEventListener('click', () => {
   sidebarWrapper.classList.add('show');
@@ -79,7 +85,7 @@ sidebar.innerHTML = sublinks.map((item) => {
 <h4>${page}</h4>
 <div class="sidebar-sublinks">
 ${links.map((link) => {
-    return `<a href="${link.url}"><i class="${link.icon}"></i>${link.label}</a>`;
+  return `<a href="${link.url} title="${link.desc}"><i class="${link.icon}"></i>${link.label}</a>`;
   }).join('')}
 </div>
 </article>`;
@@ -110,11 +116,9 @@ linkBtns.forEach((btn) => {
       <section> 
       <h4>${page}</h4>
       <div class="submenu-center ${columns}">
-      ${links
-          .map((link) => {
-            return `<a href="${link.url}"><i class="${link.icon}"></i>${link.label}</a>`;
-          })
-          .join('')}
+      ${links.map((link) => {
+            return `<a href="${link.url}" title="${link.desc}"><i class="${link.icon}"></i>${link.label}</a>`;
+          }).join('')}
       </div>
       </section>
       `;
@@ -125,7 +129,7 @@ linkBtns.forEach((btn) => {
 hero.addEventListener('mouseover', function (e) {
   submenu.classList.remove('show');
 });
-nav.addEventListener('mouseover', function (e) {
+navbar.addEventListener('mouseover', function (e) {
   if (!e.target.classList.contains('link-btn')) {
     submenu.classList.remove('show');
   }
