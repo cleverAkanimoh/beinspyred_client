@@ -4,8 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="clever Akanimoh" />
-		<meta name="description" content="photographer for hire, hire a good photographer. Best in service delivery" />
-		<title>Welcome Beinspyred</title>
+		<meta
+			name="description"
+			content="photographer for hire, hire a good photographer. Best in service delivery"
+		/>
+		<title>beinspyred VISUALS</title>
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -30,9 +33,34 @@
 			href="favicon_io\favicon.ico"
 		/>
 		<link rel="manifest" href="favicon_io/site.webmanifest" />
+		<style>
+			#welcome {
+				min-height: 100vh;
+				padding: 0 1rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				background: url(images/hero.svg) center/cover no-repeat;
+			}
+			main {
+				display: none;
+				/* display: block; */
+			}
+			header {
+				background: linear-gradient(
+						rgba(63, 208, 212, 0.2),
+						rgba(0, 0, 0, 0.8)
+					),
+					url(images/hero_bcg.jpg) center/cover no-repeat;
+				position: relative;
+				height: 100vh;
+			}
+		</style>
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	
+
 	<body>
 		<!-- Welcome area -->
 
@@ -90,8 +118,8 @@
 							</p>
 							<div id="btnContainer">
 								<button class="btn contact-btn contact-sm">
-								connect with Us
-							</button>
+									connect with Us
+								</button>
 							</div>
 						</article>
 						<article class="hero-images">
@@ -146,113 +174,41 @@
 				</div>
 			</header>
 
-			<footer>
-				<ul>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-facebook"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-whatsapp"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-twitter"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-linkedin"></i
-						></a>
-					</li>
-				</ul>
-				<div id="date"></div>
-			</footer>
-			<footer>
-				<ul>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-facebook"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-whatsapp"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-twitter"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-linkedin"></i
-						></a>
-					</li>
-				</ul>
-				<div id="date"></div>
-			</footer>
-			<footer>
-				<ul>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-facebook"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-whatsapp"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-twitter"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-linkedin"></i
-						></a>
-					</li>
-				</ul>
-				<div id="date"></div>
-			</footer>
-			<footer>
-				<ul>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-facebook"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-whatsapp"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-twitter"></i
-						></a>
-					</li>
-					<li>
-						<a href="https://#" target="_blank"
-							><i class="fa fa-linkedin"></i
-						></a>
-					</li>
-				</ul>
-				<div id="date"></div>
-			</footer>
 		</main>
+		<footer>
+			<ul>
+				<li>
+					<a href="https://#" target="_blank"
+						><i class="fa fa-facebook"></i
+					></a>
+				</li>
+				<li>
+					<a href="https://#" target="_blank"
+						><i class="fa fa-whatsapp"></i
+					></a>
+				</li>
+				<li>
+					<a href="https://#" target="_blank"
+						><i class="fa fa-twitter"></i
+					></a>
+				</li>
+				<li>
+					<a href="https://#" target="_blank"
+						><i class="fa fa-linkedin"></i
+					></a>
+				</li>
+			</ul>
+			<div id="logoDateContainer">
+				<img src="images/logo.png" id="footerLogo" class="nav-logo" alt="" />
+				<div id="date"></div>
+			</div>
+		</footer>
 
 		<script
 			src="https://kit.fontawesome.com/013e95e6af.js"
 			crossorigin="anonymous"
 		></script>
-		<script type="module" src="ap.js"></script>
-		<script src="liveserver.js"></script>
+		<script type="module" src="app.js"></script>
+		<!-- <script src="liveserver.js"></script> -->
 	</body>
 </html>

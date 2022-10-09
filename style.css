@@ -80,21 +80,8 @@ Variables
 }
 
 @keyframes spinner {
-	0% {
-		/* transform: rotate(360deg); */
-		border-top-color: green;
-	}
-	33.33% {
-		/* transform: rotate(360deg); */
-		border-right-color: black;
-	}
-	66.67% {
-		/* transform: rotate(360deg); */
-		border-bottom-color: red;
-	}
-	100% {
+	to {
 		transform: rotate(360deg);
-		border-left-color: yellow;
 	}
 }
 
@@ -183,28 +170,18 @@ welcome page
 ===============
 */
 
-#welcome {
-	min-height: 100vh;
-	padding: 0 1rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	background: url(images/hero.svg) center/cover no-repeat;
-}
-
 #welcome img {
 	width: 310px;
 	height: 255px;
 }
 
 .loading {
-	width: 5rem;
-	height: 5rem;
-	border: 5px solid transparent;
+	width: 4rem;
+	height: 4rem;
+	border: 5px solid var(--clr-primary-9);
 	border-radius: 50%;
-	animation: spinner 5s ease forwards infinite;
+	border-top-color: var(--clr-primary-5);
+	animation: spinner 0.45s linear infinite;
 }
 
 /*
@@ -212,20 +189,9 @@ welcome page
 Stripe Styles
 ===============
 */
-main {
-	display: none;
-	/* display: block; */
-}
-
-header {
-	background: linear-gradient(rgba(63, 208, 212, 0.25), rgba(0, 0, 0, 0.8)),
-		url(images/hero_bcg.jpg) center/cover no-repeat;
-	position: relative;
-	height: 100vh;
-}
 
 header nav img {
-	width: clamp(100px 50% 200px);
+	width: 210px;
 	height: 40px;
 	cursor: pointer;
 }
@@ -262,7 +228,8 @@ header nav img {
 }
 
 button.link-btn {
-	color: var(--clr-primary-5);
+	color: white;
+	font-weight: bold;
 }
 
 .btn {
@@ -303,6 +270,7 @@ button.link-btn {
 .contact-sm {
 	display: block;
 	width: 300px;
+	font-weight: 500;
 	background: transparent;
 	border: 2px solid #b0c4d8;
 }
@@ -517,16 +485,52 @@ button.link-btn {
 /* footer design */
 
 footer {
-	background: var(--clr-grey-1);
+	display: grid;
+	place-items: center;
+	position: relative;
+	background: var(--clr-primary-1);
 	padding: 5rem 1rem;
+	color: var(--clr-grey-8);
+	font-size: 0.9rem;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
 }
 
-footer p {
-	color: var(--clr-white);
-	text-align: center;
-	text-transform: capitalize;
-	letter-spacing: var(--spacing);
-	margin-bottom: 0;
+footer ul,
+footer div {
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	padding: 0.5rem;
+}
+
+footer ul {
+	border-bottom: 1px solid;
+}
+
+footer ul li {
+	padding: 0.5rem;
+}
+
+footer a:link,
+footer a:visited {
+	color: var(--clr-grey-7);
+	border: 1px solid;
+	border-radius: 50%;
+	padding: 0.4rem;
+}
+footer a:hover {
+	color: var(--clr-grey-10);
+}
+
+footer img {
+	width: 200px;
+	height: 40px;
+	cursor: pointer;
+}
+
+footer #date {
+	font-size: 0.98rem;
 }
 
 /* responsiveness */
@@ -594,6 +598,7 @@ footer p {
 }
 
 /* hero media query */
+
 @media screen and (min-width: 600px) {
 	.hero-info em {
 		font-size: 4rem;

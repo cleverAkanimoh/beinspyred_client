@@ -13,7 +13,7 @@ const submenu = document.querySelector('.submenu');
 const hero = document.querySelector('.hero');
 
 const beinspyredText = document.querySelector('.hero-info em');
-const logo = document.querySelector('.nav-logo');
+const logo = document.querySelectorAll('.nav-logo');
 
 const contactBtn = document.querySelectorAll('.contact-btn');
 const contactWrapper = document.querySelector('.contactWrapper');
