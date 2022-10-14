@@ -1,113 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="clever Akanimoh" />
-		<meta
-			name="description"
-			content="photographer for hire, hire a good photographer. Best in service delivery"
-		/>
-		<title>beinspyred VISUALS</title>
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="favicon_io/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="favicon_io/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="favicon_io/favicon-16x16.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="favicon_io\favicon.ico"
-		/>
-		<link rel="manifest" href="favicon_io/site.webmanifest" />
-		<style>
-			#welcome {
-				min-height: 100vh;
-				padding: 0 1rem;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				text-align: center;
-				background: url(images/hero.svg) center/cover no-repeat;
-			}
-			main {
-				display: none;
-				/* display: block; */
-			}
-			header {
-				background: linear-gradient(
-						rgba(63, 208, 212, 0.2),
-						rgba(0, 0, 0, 0.8)
-					),
-					url(images/hero_bcg.jpg) center/cover no-repeat;
-				position: relative;
-				height: 100vh;
-			}
-		</style>
-		<link rel="stylesheet" href="style.css" />
-	</head>
 
-	<body>
-		<!-- Welcome area -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="clever Akanimoh" />
+	<meta name="description" content="photographer for hire, hire a good photographer. Best in service delivery" />
+	<title>beinspyred VISUALS</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon.ico" />
+	<link rel="manifest" href="favicon_io/site.webmanifest" />
+	<style>
+		#welcome {
+			min-height: 100vh;
+			padding: 0 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background: url(images/hero.svg) center/cover no-repeat;
+		}
 
-		<div id="welcome">
-			<h2>welcome to beinspyred visuals</h2>
-			<img src="images/lady_with_camera.svg" alt="welcome camera" />
-			<h3>please wait...</h3>
-			<div class="loading"></div>
-		</div>
+		main {
+			display: none;
+			/* display: block; */
+		}
 
-		<main>
-			<header>
-				<!-- navbar -->
-				<nav class="nav">
-					<div class="nav-center">
-						<div class="nav-header">
-							<img
-								src="images/logo.png"
-								class="nav-logo"
-								alt=""
-							/>
-							<button class="btn toggle-btn">
-								<i class="fas fa-bars"></i>
-							</button>
-						</div>
-						<ul class="nav-links">
-							<li>
-								<button class="link-btn">services</button>
-							</li>
-							<li>
-								<button class="link-btn">blog</button>
-							</li>
-							<li>
-								<button class="link-btn">company</button>
-							</li>
-						</ul>
-						<button class="btn contact-btn">contact us</button>
+		header {
+			background: linear-gradient(rgba(63, 208, 212, 0.2),
+					rgba(0, 0, 0, 0.8)),
+				url(images/hero_bcg.jpg) center/cover no-repeat;
+			position: relative;
+			height: 100vh;
+		}
+	</style>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<!-- Welcome area -->
+
+	<div id="welcome">
+		<h2>welcome to beinspyred visuals</h2>
+		<img src="images/lady_with_camera.svg" alt="welcome image" />
+		<h3>please wait...</h3>
+		<div class="loading"></div>
+	</div>
+
+	<main>
+		<header>
+			<!-- navbar -->
+			<nav class="nav">
+				<div class="nav-center">
+					<div class="nav-header">
+						<img src="images/logo.png" class="nav-logo" alt="" />
+						<button class="btn toggle-btn">
+							<i class="fas fa-bars"></i>
+						</button>
 					</div>
-				</nav>
+					<ul class="nav-links">
+						<li>
+							<button class="link-btn">services</button>
+						</li>
+						<li>
+							<button class="link-btn">blog</button>
+						</li>
+						<li>
+							<button class="link-btn">company</button>
+						</li>
+					</ul>
+					<button class="btn contact-btn">contact us</button>
+				</div>
+			</nav>
 
+			<div id="mainBody">
 				<!-- hero  -->
 				<section class="hero">
 					<div class="hero-center">
 						<article class="hero-info">
 							<h1>
-								<em>beinspyred</em> <i class="fas fa-camera"></i
-								><br />capturing your moments with style
+								<em>beinspyred</em> <i class="fas fa-camera"></i><br />capturing your moments with style
 							</h1>
 							<p>
 								Millions of customers from all works of life,
@@ -123,11 +98,7 @@
 							</div>
 						</article>
 						<article class="hero-images">
-							<img
-								src="images/phone.svg"
-								class="phone-img"
-								alt=""
-							/>
+							<img src="images/phone.svg" class="phone-img" alt="" />
 						</article>
 					</div>
 				</section>
@@ -150,65 +121,244 @@
 						<h2>contact us on</h2>
 						<ul class="contactLinks">
 							<li>
-								<a href="https://#" target="_blank"
-									><i class="fa fa-facebook"></i> facebook</a
-								>
+								<a href="https://#" target="_blank"><i class="fa fa-facebook"></i> facebook</a>
 							</li>
 							<li>
-								<a href="https://#" target="_blank"
-									><i class="fa fa-whatsapp"></i> whatsapp</a
-								>
+								<a href="https://#" target="_blank"><i class="fa fa-whatsapp"></i> whatsapp</a>
 							</li>
 							<li>
-								<a href="https://#" target="_blank"
-									><i class="fa fa-twitter"></i> twitter</a
-								>
+								<a href="https://#" target="_blank"><i class="fa fa-twitter"></i> twitter</a>
 							</li>
 							<li>
-								<a href="https://#" target="_blank"
-									><i class="fa fa-linkedin"></i> LinkedIn</a
-								>
+								<a href="https://#" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
 							</li>
 						</ul>
 					</aside>
 				</div>
-			</header>
+		</header>
 
+		<!-- gallery -->
+
+		<section class="gallery">
+			<div class="galleryFirstDiv">
+				<h2>Our collection</h2>
+				<div class="imagesContainer imagesEnvelop">
+					<picture>
+						<img class="galleryImage" src="images/image_temp1.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp2.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp3.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp4.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp5.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp6.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp7.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp8.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp9.jpg">
+					</picture>
+					<picture>
+						<img class="galleryImage" src="images/image_temp10.jpg">
+					</picture>
+				</div>
+			</div>
+		</section>
+
+		<!-- galleryModal -->
+
+		<aside class="galleryWrapper">
+		</aside>
+
+		<!-- explore -->
+
+		<main>
+			<div class="section-title">
+				<h1>Loading...</h1>
+				<div class="underline"></div>
+			</div>
+			<section class="followers">
+				<div class="container"></div>
+
+				<div class="btn-container"></div>
+			</section>
 		</main>
+
+		<!-- <section class="gallery">
+			<div class="galleryFirstDiv">
+				<h2>explore photos from other photographers</h2>
+				<div class="imagesContainer">
+					<picture>
+						<img src="images/image_temp1.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp2.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp3.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp4.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp5.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp6.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp7.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp8.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp9.jpg">
+					</picture>
+					<picture>
+						<img src="images/image_temp10.jpg">
+					</picture>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- posts -->
+
+		<section id="postContainer">
+			<article id="postInfo">
+				<h1>blog post</h1>
+				<p>some blog post will appear here</p>
+			</article>
+		</section>
+
+		<!-- numbers -->
+
+		<section class="numbers">
+			<!-- single number -->
+			<article>
+				<span class="number" data-value="500"></span>
+				<p>Succeeded Projects</p>
+			</article>
+			<!-- end of single number -->
+			<!-- single number -->
+			<article>
+				<span class="number" data-value="17140"></span>
+				<p>Working Hours Spent</p>
+			</article>
+			<!-- end of single number -->
+			<!-- single number -->
+			<article>
+				<span class="number" data-value="1500"></span>
+				<p>Happy Clients</p>
+			</article>
+			<!-- end of single number -->
+		</section>
+
+		<form action="#" method="post">
+			<h3>what should we improve on?</h3>
+			<h4>your feedback will help us grow</h4>
+			<div class="formInputs">
+				<div id="emailContinue">
+					<legend>email field cannot be empty</legend>
+					<input type="email" name="userEmail" id="userEmail" placeholder="email" required>
+					<button id="continueBtn">continue</button>
+				</div>
+				<div id="txtSubmit">
+					<textarea placeholder="type your feedback here..."></textarea>
+					<label></label>
+					<input type="submit" value="send feedback" id="submitInput"
+						title="submit disabled please enter atleast 5 character text" disabled>
+				</div>
+			</div>
+		</form>
+
 		<footer>
-			<ul>
+			<p>
+				<a href="tel:"><i class="fa fa-phone"></i> call to book</a>
+			</p>
+			<dl class="list">
+				<dt>Services</dt>
+				<dd>
+					<a href="#"><i class="fa fa-house"></i> indoors</a>
+				</dd>
+				<dd>
+					<a href="#"><i class="fa-solid fa-map-location-dot"></i> outdoors</a>
+				</dd>
+				<dd>
+					<a href="#"><i class="fa fa-book"></i> sessions</a>
+				</dd>
+
+
+				<dt>Blog</dt>
+				<dd>
+					<a href="#"><i class="fa fa-pen-to-square"></i> posts</a>
+				</dd>
+				<dd>
+					<a href="#"><i class="fa fa-folder"></i> libraries</a>
+				</dd>
+				<dd>
+					<a href="#"><i class="fa fa-phone"></i> explore</a>
+				</dd>
+
+
+				<dt>Company</dt>
+				<dd>
+					<a href="#"><i class="fa fa-briefcase"></i> about</a>
+				</dd>
+				<dd>
+					<a href="#"><i class="fa fa-person"></i> customers</a>
+				</dd>
+				<dd>
+					<a href="#"><i class="fa fa-book"></i> billings</a>
+				</dd>
+
+			</dl>
+
+			<li class="email">
+				<a href="mailto:"><i class="fa-solid fa-envelope"></i> support@beinspyred.com</a>
+			</li>
+
+			<ul class="socialList">
 				<li>
-					<a href="https://#" target="_blank"
-						><i class="fa fa-facebook"></i
-					></a>
+					<a href="https://#" target="_blank"><i class="fa fa-facebook"></i></a>
 				</li>
 				<li>
-					<a href="https://#" target="_blank"
-						><i class="fa fa-whatsapp"></i
-					></a>
+					<a href="https://#" target="_blank"><i class="fa fa-whatsapp"></i></a>
 				</li>
 				<li>
-					<a href="https://#" target="_blank"
-						><i class="fa fa-twitter"></i
-					></a>
+					<a href="https://#" target="_blank"><i class="fa fa-twitter"></i></a>
 				</li>
 				<li>
-					<a href="https://#" target="_blank"
-						><i class="fa fa-linkedin"></i
-					></a>
+					<a href="https://#" target="_blank"><i class="fa fa-linkedin"></i></a>
 				</li>
 			</ul>
+			<address>locate us at No.444 Nwaniba Road</address>
 			<div id="logoDateContainer">
 				<img src="images/logo.png" id="footerLogo" class="nav-logo" alt="" />
 				<div id="date"></div>
 			</div>
+			<div id="webBuilder">
+				<samp>made cleverly</samp>
+			</div>
 		</footer>
+		</div>
+	</main>
 
-		<script
-			src="https://kit.fontawesome.com/013e95e6af.js"
-			crossorigin="anonymous"
-		></script>
-		<script type="module" src="app.js"></script>
-		<!-- <script src="liveserver.js"></script> -->
-	</body>
+	<script src="https://kit.fontawesome.com/013e95e6af.js" crossorigin="anonymous"></script>
+	<script type="module" src="app.js"></script>
+	<!-- <script src="liveserver.js"></script> -->
+</body>
+
 </html>

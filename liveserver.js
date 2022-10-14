@@ -1,4 +1,3 @@
-// <![CDATA[  <-- For SVG support
 if ('WebSocket' in window) {
     (function () {
         function refreshCSS() {
@@ -32,4 +31,3 @@ if ('WebSocket' in window) {
 else {
     console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 }
-// ]]>
