@@ -194,16 +194,19 @@ continueBtn.onclick = (e) => {
 
 // word count
 textArea.onkeyup = () => {
-  let textAreaValue = textArea.value;
+  let textAreaValue = textArea.value.trim();
   let textAreaValueLength = textAreaValue.split(' ').length;
 
   if (textAreaValue === '') {
     wordCount.innerText = '';
   } else if (textAreaValueLength > 5) {
     submit.removeAttribute('disabled');
+    submit.title = 'submit';
     wordCount.innerText = `word count: ${textAreaValueLength}`;
   } else if (textAreaValueLength < 5) {
     submit.setAttribute('disabled', 'true');
+    submit.title = 'submit disabled you need to enter atleast 5 words'
+    wordCount.innerText = `word count: ${textAreaValueLength}`;
   } else {
     wordCount.innerText = `word count: ${textAreaValueLength}`;
   }
