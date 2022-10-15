@@ -1,6 +1,8 @@
 import sublinks from './js/data.js';
 
-import { welcome, main, navbar, toggleBtn, sidebarWrapper, sidebar, linkBtns, submenu, mainBody, hero, beinspyredText, logo, contactBtn, contactWrapper, date, items, continueBtn, formInputs, wordCount, errorText, textArea, userEmail, submit } from './js/declarations.js';
+import galleryImages from './js/imageGallery.js';
+
+import { welcome, main, navbar, toggleBtn, sidebarWrapper, sidebar, linkBtns, submenu, hero, beinspyredText, logo, contactBtn, contactWrapper, date, items, continueBtn, formInputs, wordCount, errorText, textArea, userEmail, submit, imagesEnvelop, galleryWrapper } from './js/declarations.js';
 
 // setting year
 date.innerText = new Date().getFullYear();
@@ -162,7 +164,6 @@ const updateCount = (el) => {
 
     el.textContent = `${initialValue}+`;
   }, 1);
-  // console.log(increaseCount);
 };
 
 items.forEach((item) => {
@@ -214,17 +215,45 @@ textArea.onkeyup = () => {
 
 // post api area
 
-// const key = 
+const apiKey = 'AIzaSyANUrcJTHxucJe-_D_3cmy1aBGOEzFmXu8';
+
+const url = `https://www.googleapis.com/blogger/v3/blogs/2399953?key=${apiKey}`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.log('request not succesfull', err));
+
+// photoGallery
+
+// display all items when page loads
+window.addEventListener("DOMContentLoaded", function () {
+  diplayImageItems(galleryImages);
+});
+//* To display projects
+
+const diplayImageItems = imageItems => {
+    let displayImages = imageItems.map( image => {
+      return `<picture>
+          <img class="galleryImage" src=${image.src}>
+        </picture>`;
+    });
+
+    displayImages = displayImages.join("");
+
+    imagesEnvelop.innerHTML = displayImages;
+}
 
 // photo modal
 
-const imagesEnvelop = document.querySelector('.imagesEnvelop');
-const galleryWrapper = document.querySelector('.galleryWrapper');
-
 imagesEnvelop.onclick = (e) => {
   let target = e.target;
-  galleryWrapper.classList.add('show');
-  galleryWrapper.innerHTML = `<div class="galleryModal"><img src=${target.src}><h3>description</h3><p>this image</p></div>`;
+  if (target.classList.contains('galleryImage')) {
+    galleryWrapper.classList.add('show');
+    galleryWrapper.innerHTML = `<div class="galleryModal"><img src=${target.src}><h3>description</h3><div class="underline"></div><p>${target.alt}</p></div>`;
+  } else {
+    return;
+  }
 }
 
 galleryWrapper.onclick = (e) => {
@@ -238,12 +267,11 @@ import displayFollowers from './js/displayFollowers.js';
 import paginate from './js/paginate.js';
 import displayButtons from './js/displayButton.js';
 
-
-const title = document.querySelector('.section-title h1');
+const titleContainer = document.querySelector('.section-title');
 const btnContainer = document.querySelector('.btn-container');
 
-let index = 0
-let pages = []
+let index = 0;
+let pages = [];
 
 const setupUI = () => {
   displayFollowers(pages[index])
@@ -251,14 +279,15 @@ const setupUI = () => {
 }
 
 const init = async () => {
+  titleContainer.innerHTML = `<h3>Loading...</h3>
+				<div class="loading"></div>`;
   try {
     const followers = await fetchFollowers();
-    title.textContent = 'pagination';
+    title.textContent = 'explore';
     pages = paginate(followers);
     setupUI();
   } catch (err) {
-    title.style.fontSize = `${1.1}rem`;
-    title.textContent = `${err} your request, please check your internet connection`;
+    titleContainer.innerHTML = `<h4>your request cannot be processed, please check your internet connection</h4>`;
   }
 }
 
@@ -283,3 +312,8 @@ btnContainer.addEventListener('click', function (e) {
 })
 
 window.addEventListener('load', init);
+
+// explore
+
+// const accessKey = 'OQIrrQHdFrElNRGYAlEiF9cUD68rO6vcO9D7lX0f1Bs';
+// const secretKey = '5arQCJhEkW_GSViQ2cPxj6ta9CQX9i0wmpSIJ5N8WRI';

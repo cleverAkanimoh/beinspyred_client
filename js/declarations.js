@@ -23,6 +23,10 @@ const date = document.querySelector('#date');
 
 const items = [...document.querySelectorAll('.number')];
 
+
+const imagesEnvelop = document.querySelector('.imagesEnvelop');
+const galleryWrapper = document.querySelector('.galleryWrapper');
+
 const continueBtn = document.querySelector('#continueBtn');
 const formInputs = document.querySelector('.formInputs');
 const wordCount = document.querySelector('form label');
@@ -31,4 +35,4 @@ const textArea = document.querySelector('form textarea');
 const userEmail = document.querySelector('#userEmail');
 const submit = document.querySelector('#submitInput');
 
-export { welcome, main, navbar, toggleBtn, sidebarWrapper, sidebar, linkBtns, submenu, mainBody, hero, beinspyredText, logo, contactBtn, contactWrapper, date, items, continueBtn, formInputs, wordCount, errorText, textArea, userEmail, submit };
+export { welcome, main, navbar, toggleBtn, sidebarWrapper, sidebar, linkBtns, submenu, mainBody, hero, beinspyredText, logo, contactBtn, contactWrapper, date, items, continueBtn, formInputs, wordCount, errorText, textArea, userEmail, submit, imagesEnvelop, galleryWrapper };

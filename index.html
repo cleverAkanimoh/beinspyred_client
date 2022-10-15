@@ -143,36 +143,9 @@
 			<div class="galleryFirstDiv">
 				<h2>Our collection</h2>
 				<div class="imagesContainer imagesEnvelop">
-					<picture>
-						<img class="galleryImage" src="images/image_temp1.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp2.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp3.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp4.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp5.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp6.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp7.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp8.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp9.jpg">
-					</picture>
-					<picture>
-						<img class="galleryImage" src="images/image_temp10.jpg">
-					</picture>
+					<!-- <picture>
+						<img class="galleryImage" src="images/image_temp1.jpg" alt="this is the description for this image. It was gotten through target.attrName">
+					</picture> -->
 				</div>
 			</div>
 		</section>
@@ -184,17 +157,18 @@
 
 		<!-- explore -->
 
-		<main>
+		<section class="pagination">
 			<div class="section-title">
-				<h1>Loading...</h1>
+				<!-- <h1>Loading...</h1>
 				<div class="underline"></div>
+				<div class="loading"></div> -->
 			</div>
 			<section class="followers">
 				<div class="container"></div>
 
 				<div class="btn-container"></div>
 			</section>
-		</main>
+		</section>
 
 		<!-- <section class="gallery">
 			<div class="galleryFirstDiv">
@@ -250,7 +224,7 @@
 			<article>
 				<span class="number" data-value="500"></span>
 				<p>Succeeded Projects</p>
-			</article>
+			</article class="workingHours">
 			<!-- end of single number -->
 			<!-- single number -->
 			<article>
@@ -272,8 +246,10 @@
 			<div class="formInputs">
 				<div id="emailContinue">
 					<legend>email field cannot be empty</legend>
-					<input type="email" name="userEmail" id="userEmail" placeholder="email" required>
-					<button id="continueBtn">continue</button>
+					<section class="emailField">
+						<input type="email" name="userEmail" id="userEmail" placeholder="email" required>
+						<button id="continueBtn">continue</button>
+					</section>
 				</div>
 				<div id="txtSubmit">
 					<textarea placeholder="type your feedback here..."></textarea>
