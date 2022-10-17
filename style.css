@@ -489,6 +489,7 @@ button.link-btn {
 section.gallery {
 	padding: 5rem 1rem;
 	background: linear-gradient(rgba(255, 0, 0, 0.25), rgba(0, 0, 255, 0.244));
+	border-radius: 0 0 var(--radius) var(--radius);
 }
 
 section.gallery h2 {
@@ -741,6 +742,7 @@ form {
 	align-items: center;
 	padding: 5rem 1rem;
 	overflow-x: hidden;
+	border-radius: var(--radius) var(--radius) 0 0;
 }
 
 form h3,
@@ -758,11 +760,11 @@ form div.formInputs {
 	align-items: center;
 	transition: var(--transition);
 	margin-top: 25px;
-	transform: translateX(23%);
+	transform: translateX(25%);
 }
 
 form div.formInputs.move {
-	transform: translateX(-23%);
+	transform: translateX(-25%);
 }
 
 form div.formInputs.move #txtSubmit {
@@ -803,11 +805,8 @@ form .emailField {
 
 form div.formInputs div {
 	background: white;
-	padding: 1rem;
-	/* display: flex;
-	justify-content: center;
-	align-items: center; */
-	border-radius: var(--radius);
+	padding: 0.67rem 1rem;
+	border-radius: 0.9rem 0.5rem;
 }
 
 form div.formInputs div:last-child {
@@ -836,10 +835,9 @@ form input[type="submit"]:hover {
 form input {
 	color: var(--clr-grey-2);
 	padding: 0.4rem;
-	border: 1px solid var(--clr-primary-1);
+	border: 0;
 	outline: 0;
 	width: 190px;
-	border-radius: 0.9rem 0.5rem;
 }
 
 form #txtSubmit {
@@ -854,12 +852,12 @@ form #txtSubmit label {
 
 form textarea {
 	color: var(--clr-grey-2);
-	padding: 0.4rem;
+	padding: 0.5rem;
+	font-size: 1.08rem;
 	width: 250px;
 	height: 150px;
-	border: 1px solid var(--clr-primary-1);
+	border: 0;
 	outline: 0;
-	border-radius: 0.9rem 0.5rem;
 	resize: none;
 }
 
@@ -868,6 +866,7 @@ form #txtSubmit input {
 	margin-top: 5px;
 	color: white;
 	background: var(--clr-primary-1);
+	border-radius: 1rem 0.5rem;
 }
 
 /* footer design */
@@ -1134,9 +1133,6 @@ footer div#webBuilder {
 	.galleryWrapper .galleryModal img {
 		height: 40vh;
 		width: 44vw;
-	}
-	form div.formInputs.move {
-		transform: translateX(-32%);
 	}
 	form input {
 		width: 300px;
