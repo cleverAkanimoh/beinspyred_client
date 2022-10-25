@@ -13,6 +13,23 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon.ico" />
 	<link rel="manifest" href="favicon_io/site.webmanifest" />
 	<style>
+		@keyframes bgImgChange {
+			0%{
+				background: linear-gradient(rgba(63, 208, 212, 0.2),
+					rgba(0, 0, 0, 0.8)),
+				url(images/hero_bcg.jpg) center/cover no-repeat;
+			}
+			50% {
+				background: linear-gradient(rgba(63, 208, 212, 0.2),
+					rgba(0, 0, 0, 0.8)),
+				url(images/hero_bcg2.jpg) center/cover no-repeat;
+			}
+			100% {
+				background: linear-gradient(rgba(63, 208, 212, 0.2),
+					rgba(0, 0, 0, 0.8)),
+				url(images/hero_bcg3.jpg) center/cover no-repeat;
+			}
+		}
 		#welcome {
 			min-height: 100vh;
 			padding: 0 1rem;
@@ -30,14 +47,12 @@
 		}
 
 		header {
-			background: linear-gradient(rgba(63, 208, 212, 0.2),
-					rgba(0, 0, 0, 0.8)),
-				url(images/hero_bcg.jpg) center/cover no-repeat;
 			position: relative;
 			height: 100vh;
+			animation: bgImgChange 30s ease-out infinite;
 		}
 	</style>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -57,11 +72,12 @@
 				<div class="nav-center">
 					<div class="nav-header">
 						<img src="images/logo.png" class="nav-logo" alt="" />
-						<button class="btn toggle-btn">
+						<button class="btn about-btn">about us</button>
+						<!-- <button class="btn toggle-btn">
 							<i class="fas fa-bars"></i>
-						</button>
+						</button> -->
 					</div>
-					<ul class="nav-links">
+					<!-- <ul class="nav-links">
 						<li>
 							<button class="link-btn">services</button>
 						</li>
@@ -71,7 +87,7 @@
 						<li>
 							<button class="link-btn">company</button>
 						</li>
-					</ul>
+					</ul> -->
 					<button class="btn contact-btn">contact us</button>
 				</div>
 			</nav>
@@ -82,7 +98,7 @@
 					<div class="hero-center">
 						<article class="hero-info">
 							<h1>
-								<em>beinspyred</em> <i class="fas fa-camera"></i><br />capturing your moments with style
+								<em>Beinspyred</em> <i class="fas fa-camera"></i> capturing your moments with style
 							</h1>
 							<p>
 								Millions of customers from all works of life,
@@ -97,23 +113,23 @@
 								</button>
 							</div>
 						</article>
-						<article class="hero-images">
+						<!-- <article class="hero-images">
 							<img src="images/phone.svg" class="phone-img" alt="" />
-						</article>
+						</article> -->
 					</div>
 				</section>
 
 				<!-- modal for submenu-->
-				<div class="sidebar-wrapper">
+				<!-- <div class="sidebar-wrapper">
 					<aside class="sidebar">
-						<div class="sidebar-links"></div>
+						<div class="sidebar-links"></div> -->
 
 						<!-- links -->
-					</aside>
-				</div>
+					<!-- </aside>
+				</div> -->
 
 				<!-- links -->
-				<aside class="submenu"></aside>
+				<!-- <aside class="submenu"></aside> -->
 
 				<!-- modal for contact-->
 				<div class="contactWrapper">
@@ -157,22 +173,25 @@
 
 		<!-- explore -->
 
-		<section class="pagination">
-			<div class="section-title"></div>
+		<!-- <section class="pagination">
+			<div class="section-title">
+				<h3>Loading...</h3>
+				<div class="loading"></div>
+			</div>
 			<section class="followers">
 				<div class="container"></div>
 				<div class="btn-container"></div>
 			</section>
-		</section>
+		</section> -->
 
 		<!-- posts -->
 
-		<section id="postContainer">
+		<!-- <section id="postContainer">
 			<article id="postInfo">
 				<h1>blog post</h1>
 				<p>some blog post will appear here</p>
 			</article>
-		</section>
+		</section> -->
 
 		<!-- numbers -->
 
@@ -184,7 +203,7 @@
 			</article class="workingHours">
 			<!-- end of single number -->
 			<!-- single number -->
-			<article>
+			<article id="workingHours">
 				<span class="number" data-value="17140"></span>
 				<p>Working Hours Spent</p>
 			</article>
@@ -197,14 +216,39 @@
 			<!-- end of single number -->
 		</section>
 
-		<form action="#" method="post">
+		<section class="otherImg">
+            <article>
+				<h2>More from Beinspyred</h2>
+				<div>
+					<img src="images/more_img1.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img2.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img3.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img4.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img5.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img6.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img7.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img8.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img9.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img10.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img11.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img12.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img13.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img14.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img15.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img16.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img17.jpg" alt="images for more from beinspyredd studios" >
+					<img src="images/more_img18.jpg" alt="images for more from beinspyredd studios" >
+				</div>
+			</article>
+		</section>
+
+		<!-- <form action="#" method="post">
 			<h3>what should we improve on?</h3>
 			<h4>your feedback will help us grow</h4>
 			<div class="formInputs">
 				<div id="emailContinue">
 					<legend>email field cannot be empty</legend>
 					<section class="emailField">
-						<i class="fa-solid fa-message"></i>
 						<input type="email" name="userEmail" id="userEmail" placeholder="email address" required>
 						<button id="continueBtn">continue</button>
 					</section>
@@ -216,49 +260,49 @@
 						title="submit disabled please enter atleast 5 character text" disabled>
 				</div>
 			</div>
-		</form>
+		</form> -->
 
 		<footer>
 			<p>
-				<a href="tel:"><i class="fa fa-phone"></i> call to book</a>
+				<a href="tel:09076514500"><i class="fa-solid fa-phone"></i>call to book</a>
 			</p>
-			<dl class="list">
+			<!-- <dl class="list">
 				<dt>Services</dt>
 				<dd>
-					<a href="#"><i class="fa fa-house"></i> indoors</a>
+					<a href="/services#indoors"><i class="fa fa-house"></i> indoors</a>
 				</dd>
 				<dd>
-					<a href="#"><i class="fa-solid fa-map-location-dot"></i> outdoors</a>
+					<a href="/services#outdoors"><i class="fa-solid fa-map-location-dot"></i> outdoors</a>
 				</dd>
 				<dd>
-					<a href="#"><i class="fa fa-book"></i> sessions</a>
+					<a href="/services#sessions"><i class="fa fa-book"></i> sessions</a>
 				</dd>
 
 
 				<dt>Blog</dt>
 				<dd>
-					<a href="#"><i class="fa fa-pen-to-square"></i> posts</a>
+					<a href="/blog#posts"><i class="fa fa-pen-to-square"></i> posts</a>
 				</dd>
 				<dd>
-					<a href="#"><i class="fa fa-folder"></i> libraries</a>
+					<a href="/blog#libraries"><i class="fa fa-folder"></i> libraries</a>
 				</dd>
 				<dd>
-					<a href="#"><i class="fa fa-phone"></i> explore</a>
+					<a href="/blog#explore"><i class="fa fa-phone"></i> explore</a>
 				</dd>
 
 
 				<dt>Company</dt>
 				<dd>
-					<a href="#"><i class="fa fa-briefcase"></i> about</a>
+					<a href="/company#about"><i class="fa fa-briefcase"></i> about</a>
 				</dd>
 				<dd>
-					<a href="#"><i class="fa fa-person"></i> customers</a>
+					<a href="/company#customers"><i class="fa fa-person"></i> customers</a>
 				</dd>
 				<dd>
-					<a href="#"><i class="fa fa-book"></i> billings</a>
+					<a href="/company#billing"><i class="fa fa-book"></i> billings</a>
 				</dd>
 
-			</dl>
+			</dl> -->
 
 			<li class="email">
 				<a href="mailto:"><i class="fa-solid fa-envelope"></i> support@beinspyred.com</a>
@@ -278,7 +322,7 @@
 					<a href="https://#" target="_blank"><i class="fa fa-linkedin"></i></a>
 				</li>
 			</ul>
-			<address>locate us at No.444 Nwaniba Road</address>
+			<address>locate us at No 407 Nwaniba Road</address>
 			<div id="logoDateContainer">
 				<img src="images/logo.png" id="footerLogo" class="nav-logo" alt="" />
 				<div id="date"></div>
@@ -291,8 +335,7 @@
 	</main>
 
 	<script src="https://kit.fontawesome.com/013e95e6af.js" crossorigin="anonymous"></script>
-	<script type="module" src="app.js"></script>
-	<!-- <script src="liveserver.js"></script> -->
+	<script type="module" src="js/app.js"></script>
 </body>
 
 </html>
